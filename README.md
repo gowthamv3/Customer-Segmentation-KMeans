@@ -66,8 +66,8 @@ K-Means is an unsupervised machine learning algorithm that groups similar observ
 
 The notebook tests different values of K from **2 to 10**.
 
-```python
-K_range = range(2, 11)
+python
+`K_range = range(2, 11)`
 
 Selecting the Number of Clusters
 
@@ -81,7 +81,7 @@ The value of K where the inertia curve shows an "elbow" can be considered a suit
 
 The notebook identifies:
 
-Elbow K = 3
+`Elbow K = 3`
 2. Silhouette Score
 
 The Silhouette Score measures how well observations fit within their assigned clusters.
@@ -90,7 +90,7 @@ A higher Silhouette Score generally indicates better-defined clusters.
 
 The notebook identifies:
 
-Silhouette K = 4
+`Silhouette K = 4`
 
 The final implementation selects K based on the highest Silhouette Score.
 
@@ -98,15 +98,15 @@ Final K-Means Model
 
 The final K-Means model uses the K value selected from the Silhouette Score:
 
-final_K = K_range[np.argmax(silhouette_scores)]
+`final_K = K_range[np.argmax(silhouette_scores)]`
 
 The final model is then fitted to the standardized dataset.
 
-final_model = KMeans(
+`final_model = KMeans(
     n_clusters=final_K,
     random_state=42,
     n_init=10
-)
+)`
 Cluster Analysis
 
 After clustering, the project analyzes each cluster using:
@@ -139,11 +139,11 @@ Scikit-learn
 Yellowbrick
 Jupyter Notebook
 Project Structure
-Customer-Segmentation-KMeans/
+`Customer-Segmentation-KMeans/
 │
 ├── Elbow Method & Silhouette Score for K selection - Customer Segmentation Dataset.ipynb
 ├── customer_segmentation.csv
-└── README.md
+└── README.md`
 How to Run the Project
 1. Install Required Libraries
 pip install numpy pandas matplotlib scikit-learn yellowbrick jupyter
