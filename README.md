@@ -82,6 +82,7 @@ The value of K where the inertia curve shows an "elbow" can be considered a suit
 The notebook identifies:
 
 `Elbow K = 3`
+
 2. Silhouette Score
 
 The Silhouette Score measures how well observations fit within their assigned clusters.
@@ -102,11 +103,10 @@ The final K-Means model uses the K value selected from the Silhouette Score:
 
 The final model is then fitted to the standardized dataset.
 
-`final_model = KMeans(
-    n_clusters=final_K,
-    random_state=42,
-    n_init=10
-)`
+`final_model = KMeans`
+`(n_clusters=final_K,`
+    `random_state=42,`
+    `n_init=10)`
 Cluster Analysis
 
 After clustering, the project analyzes each cluster using:
@@ -139,11 +139,12 @@ Scikit-learn
 Yellowbrick
 Jupyter Notebook
 Project Structure
-`Customer-Segmentation-KMeans/
-│
-├── Elbow Method & Silhouette Score for K selection - Customer Segmentation Dataset.ipynb
-├── customer_segmentation.csv
-└── README.md`
+`Customer-Segmentation-KMeans/`
+`│`
+`├── Elbow Method & Silhouette Score for K selection - Customer Segmentation Dataset.ipynb`
+`├── customer_segmentation.csv`
+`└── README.md`
+
 How to Run the Project
 1. Install Required Libraries
 pip install numpy pandas matplotlib scikit-learn yellowbrick jupyter
